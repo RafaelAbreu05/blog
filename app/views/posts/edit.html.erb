@@ -1,6 +1,15 @@
-<h1>Editing post</h1>
+<div class="row">
+	<div class="twelve columns">
+		<h1>Post<h1>
+		</div>
+	</div>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<div class="row">
+  <div class="twelve columns">
+    <%= link_to 'Edit Post', edit_post_path(@post), :class=> "button big" %>
+    <%= link_to 'Back to Posts', posts_path, :class=> "button big" %>
+  </div>
+</div>

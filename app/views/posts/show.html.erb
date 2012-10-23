@@ -1,31 +1,60 @@
-<p id="notice"><%= notice %></p>
- 
-<p>
-  <b>Name:</b>
-  <%= @post.name %>
-</p>
- 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
- 
-<p>
-  <b>Tags:</b>
-  <%= join_tags(@post) %>
-</p>
- 
-<h2>Comments</h2>
-<%= render @post.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
- 
- 
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Back to Posts', posts_path %> |
+<div class="row">
+	<div class="twelve columns">
+		<h1>Post<h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<p id="notice"><%= notice %></p>
+	<p>
+		<b>Name:</b>
+		<%= @post.name %>
+	</p>
+
+	<p id="notice"><%= notice %></p>
+
+	<p>
+		<b>Name:</b>
+		<%= @post.name %>
+	</p>
+
+	<p>
+		<b>Title:</b>
+		<%= @post.title %>
+	</p>
+
+	<p>
+		<b>Content:</b>
+		<%= @post.content %>
+	</p>
+
+	<p>
+		<b>Tags:</b>
+		<%= join_tags(@post) %>
+	</p>
+</div>
+
+
+<div class="row">
+	<div class="six columns">
+		<h2>Comments</h2>
+		<br/>
+		<%= render @post.comments %>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<h4>Add a comment:</h4>
+		<%= render "comments/form" %>
+	</div>
+</div>
+
+<br/>
+
+<div class="row">
+	<div class="twelve columns">
+		<%= link_to 'Edit Post', edit_post_path(@post), :class=> "button big" %>
+		<%= link_to 'Back to Posts', posts_path, :class=> "button big" %>
+	</div>
+</div>
